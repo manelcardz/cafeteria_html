@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="public/logo.png" alt="Coffee Creative Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cafes">Cafés</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="home" id="home">
+    <div class="home-texto">
+      <h1>Coffee <span class="creative">Creative</span> Coffee</h1>
+      <button>Ver cardápio</button>
+      <button class="btn-secundario">Conheça mais</button>
+    </div>
+    <div class="home-img">
+      <img src="public/pessoa-chao.png" alt="Ilustração">
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="sobre-texto">
+      <h2>Sobre <span class="destaque">nós</span></h2>
+      <p>Somos uma cafeteria criativa que mistura sabor, ambiente e cultura digital. Aqui o café é inspiração para
+        codar, criar e relaxar.</p>
+    </div>
+    <div class="sobre-img">
+      <img src="public/pessoa-notebook.png" alt="Ilustração sobre">
+    </div>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1LRd8FMJxSo?si=RjlEc6Sp3A4AvcQD"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+
+  <section class="cafes" id="cafes">
+    <h2>Cafés e lanches</h2>
+    <div class="filtros">
+      <button class="ativo">Todos</button>
+      <button>Doces</button>
+      <button>Salgados</button>
+      <button>Bebidas</button>
+    </div>
+    <div class="galeria">
+      <img src="public/cafe/cafe1.png" alt="Café expresso">
+      <img src="public/cafe/cafe2.png" alt="Cappuccino">
+      <img src="public/cafe/cafe3.png" alt="Grãos de café">
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <h2>Sugestões? <span class="destaque">COMMIT!</span></h2>
+    <form>
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar sugestão</button>
+    </form>
+  </section>
+
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Coffee Creative. Todos os direitos reservados.</p>
+      <div class="redes-sociais">
+        <a target="_blank" href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+        <a target="_blank" href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+        <a target="_blank" href="https://ifood.com.br/?utm_source=app-local"><i class="fa fa-shopping-basket"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #5b5b5b;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    header {
+      background-color: #9b9999;
+      padding: 2px 20px;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo img {
+      width: 300px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f4b942;
+    }
+
+    .home {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 40px;
+      flex-wrap: wrap;
+    }
+
+    .home-texto h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .home-texto .creative {
+      color: #f4b942;
+    }
+
+    .home-texto button {
+      padding: 12px 24px;
+      margin-right: 10px;
+      background-color: #f4b942;
+      color: #4a2e2e;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .home-texto .btn-secundario {
+      background-color: transparent;
+      border: 2px solid #f4b942;
+      color: #f4b942;
+    }
+
+    .home-texto button:hover,
+    .btn-secundario:hover,
+    form button:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .home-img img {
+      max-width: 600px;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .sobre {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 80px 40px;
+      gap: 40px;
+      flex-wrap: wrap;
+      background-color: #4f4f4f;
+    }
+
+    .sobre .destaque {
+      color: #f4b942;
+    }
+
+    .sobre-img img {
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .cafes {
+      padding: 80px 40px;
+      background-color: #5b5b5b;
+      text-align: center;
+    }
+
+    .cafes h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .filtros {
+      margin-bottom: 30px;
+    }
+
+    .filtros button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #cf9013;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .filtros .ativo {
+      background-color: #f4b942;
+      color: #d69c9c;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .galeria img {
+      width: 280px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .contato {
+      padding: 80px 40px;
+      background-color: #4f4f4f;
+      text-align: center;
+    }
+
+    .contato h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .contato .destaque {
+      color: #f4b942;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+      gap: 15px;
+    }
+
+    form input,
+    form textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    form button {
+      padding: 12px;
+      background-color: #f4b942;
+      color: #4a2e2e;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      background-color: #626262;
+      text-align: center;
+      padding: 30px 20px;
+      color: #fff;
+    }
+
+    .footer-container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .redes-sociais a {
+      margin: 0 10px;
+    }
+
+    .redes-sociais img {
+      width: 24px;
+    }
+
+    @media (max-width: 768px) {
+
+      .home,
+      .sobre {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-img img,
+      .sobre-img img {
+        max-width: 100%;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
+
+</body>
+
+</html>
